@@ -56,7 +56,7 @@ def test_knn_fit_invalid_inputs():
     with pytest.raises(ValueError, match="k and p must be positive integers."):
         model.fit(X_train, y_train, k=-1, p=2)
 
-
+        
 def test_knn_predict(knn_instance):
     X_test = np.array([[4, 5], [1, 1]])
     predictions = knn_instance.predict(X_test)
